@@ -5,14 +5,33 @@ public class Calculator {
     public static void main(String[] args) {
 
         Scanner keyboardInput = new Scanner(System.in);
-        System.out.println("Enter x: ");
+        System.out.print("Enter x: ");
         double x = keyboardInput.nextDouble();
-        System.out.println("Enter y: ");
+        System.out.print("Enter y: ");
         double y = keyboardInput.nextDouble();
 
-        double sum = x + y;
+        keyboardInput.nextLine();
 
-        System.out.println("Sum of x + y = " + sum);
+        System.out.print("What operation would you like to perform? : Addition(+) or Subtraction(-): ");
+        String operator = keyboardInput.nextLine();
+
+        // Operation handling
+        switch (operator) {
+
+            case "Addition":
+            case "+":
+                double sum = x + y;
+                System.out.println("Sum: " + sum);
+                break;
+            case "Subtraction":
+            case "-":
+                double difference = x - y;
+                System.out.println("Difference: " + difference);
+            default:
+                System.out.println("Error: invalid operator.");
+                keyboardInput.close();
+                return;
+        }
 
     }
 }
