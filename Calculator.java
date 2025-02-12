@@ -37,8 +37,14 @@ public class Calculator {
             case "Division":
             case "/":
                 double quotient = x / y;
-                System.out.println("Quotient: " + quotient);
-                break;
+                if (y == 0) {
+                    System.out.println("Divide by Zero Error.");
+                    break;
+
+                } else {
+                    System.out.println("Quotient: " + quotient);
+                    break;
+                }
             default:
                 System.out.println("Error: invalid operator.");
                 keyboardInput.close();
