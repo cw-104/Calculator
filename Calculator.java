@@ -12,7 +12,8 @@ public class Calculator {
 
         keyboardInput.nextLine();
 
-        System.out.print("What operation would you like to perform? : Addition(+) or Subtraction(-): ");
+        System.out.print(
+                "What operation would you like to perform? : Addition(+), Subtraction(-), Multiplication(*), or Division(/): ");
         String operator = keyboardInput.nextLine();
 
         // Operation handling
@@ -27,6 +28,17 @@ public class Calculator {
             case "-":
                 int difference = x - y;
                 System.out.println("Difference: " + difference);
+                break;
+            case "Multiplication":
+            case "*":
+                int product = x * y;
+                System.out.println("Product: " + product);
+                break;
+            case "Division":
+            case "/":
+                int quotient = x / y;
+                System.out.println("Quotient: " + quotient);
+                break;
             default:
                 System.out.println("Error: invalid operator.");
                 keyboardInput.close();
