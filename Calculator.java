@@ -6,9 +6,9 @@ public class Calculator {
 
         Scanner keyboardInput = new Scanner(System.in);
         System.out.print("Enter x: ");
-        int x = keyboardInput.nextInt();
+        double x = keyboardInput.nextDouble();
         System.out.print("Enter y: ");
-        int y = keyboardInput.nextInt();
+        double y = keyboardInput.nextDouble();
 
         keyboardInput.nextLine();
 
@@ -21,22 +21,22 @@ public class Calculator {
 
             case "Addition":
             case "+":
-                int sum = x + y;
+                double sum = x + y;
                 System.out.println("Sum: " + sum);
                 break;
             case "Subtraction":
             case "-":
-                int difference = x - y;
+                double difference = x - y;
                 System.out.println("Difference: " + difference);
                 break;
             case "Multiplication":
             case "*":
-                int product = x * y;
+                double product = x * y;
                 System.out.println("Product: " + product);
                 break;
             case "Division":
             case "/":
-                int quotient = x / y;
+                double quotient = x / y;
                 System.out.println("Quotient: " + quotient);
                 break;
             default:
