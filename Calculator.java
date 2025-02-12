@@ -6,9 +6,9 @@ public class Calculator {
 
         Scanner keyboardInput = new Scanner(System.in);
         System.out.print("Enter x: ");
-        double x = keyboardInput.nextDouble();
+        int x = keyboardInput.nextInt();
         System.out.print("Enter y: ");
-        double y = keyboardInput.nextDouble();
+        int y = keyboardInput.nextInt();
 
         keyboardInput.nextLine();
 
@@ -20,12 +20,12 @@ public class Calculator {
 
             case "Addition":
             case "+":
-                double sum = x + y;
+                int sum = x + y;
                 System.out.println("Sum: " + sum);
                 break;
             case "Subtraction":
             case "-":
-                double difference = x - y;
+                int difference = x - y;
                 System.out.println("Difference: " + difference);
             default:
                 System.out.println("Error: invalid operator.");
